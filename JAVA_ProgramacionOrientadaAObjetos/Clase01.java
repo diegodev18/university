@@ -1,5 +1,3 @@
-package JAVA_ProgramacionOrientadaAObjetos;
-
 public class Clase01 {
     public static void main(String[] args) {
         int numero = 10;
