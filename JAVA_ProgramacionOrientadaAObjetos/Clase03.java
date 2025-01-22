@@ -19,6 +19,7 @@ public class Clase03 {
     
             System.out.print("\n--- Menu ---\n1) Suma\n2) Resta\n3) Multiplicacion\n4) Division\nOpcion: ");
             Integer operation = scanner.nextInt();
+            scanner.nextLine();
 
             System.out.print("\n");
 
