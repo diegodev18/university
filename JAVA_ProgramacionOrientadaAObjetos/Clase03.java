@@ -22,23 +22,34 @@ public class Clase03 {
 
             System.out.print("\n");
 
-            if (operation == 1) { // Suma
-                System.out.printf("Resultado de la suma " + number1 + " + " + number2 + " = " + (number1 + number2));
-            } else if (operation == 2) { // Resta
-                System.out.printf("Resultado de la resta " + number1 + " - " + number2 + " = " + (number1 - number2));
-            } else if (operation == 3) { // Multiplicacion
-                System.out.printf("Resultado de la mutiplicacion " + number1 + " * " + number2 + " = " + (number1 * number2));
-            } else if (operation == 4 && number1 != 0 && number2 != 0) { // Division
-                System.out.printf("Resultado de la division " + number1 + " / " + number2 + " = " + (number1 / number2));
-            } else {
-                System.out.print("Operacion no permitida!");
+            switch (operation) {
+                case 1:
+                    System.out.println("Resultado de la suma " + number1 + " + " + number2 + " = " + (number1 + number2));
+                    break;
+                    
+                    case 2:
+                        System.out.println("Resultado de la resta " + number1 + " - " + number2 + " = " + (number1 - number2));
+                    break;
+                    
+                    case 3:
+                    System.out.println("Resultado de la mutiplicacion " + number1 + " * " + number2 + " = " + (number1 * number2));
+                    break;
+
+                case 4:
+                    if (number1 != 0 && number2 != 0) {
+                        System.out.println("Resultado de la division " + number1 + " / " + number2 + " = " + (number1 / number2));
+                    } else {
+                        System.out.println("Operacion no permitida!");
+                    }
+                    break;
+            
+                default:
+                    break;
             }
 
-            System.out.print("\n");
-
             System.out.print("\nDeseas realizar otra operacion?  [S/n]: ");
-            String opt = scanner.nextLine().toLowerCase();
-            if (opt.equals("s")) {
+            String opt = scanner.nextLine();
+            if (opt.toLowerCase().equals("s")) {
                 continuar = true;
             } else {
                 continuar = false;
