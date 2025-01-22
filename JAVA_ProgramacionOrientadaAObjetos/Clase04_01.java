@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Clase04_01 {
     public static void main(String args[]) {
-        String my_array = {"Pedro", "Pablo", "Picazo", "Polo", "Pilo"};
-        System.out.println(buscarElemento(my_array, "Pedro"));
+        String[] my_array = {"Juan", "Pedro", "Maria"};
+        ArrayList<String> my_list = new ArrayList<>(Arrays.asList(my_array));
+        System.out.println(buscarElemento(my_list, "Pedro"));
     }
 
     public static int buscarElemento(ArrayList<String> lista, String texto) {
