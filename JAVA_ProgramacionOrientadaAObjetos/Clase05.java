@@ -35,10 +35,8 @@ public class Clase05 {
     private static void move(Scanner scanner, char[][] tablero, int ex_plays, char player) {
         while (true) {
             System.out.printf("\nTurno de \'%c\'\n", player);
-            System.out.print("> Fila: ");
-            int fila = scanner.nextInt();
-            System.out.print("> Columna: ");
-            int column = scanner.nextInt();
+            int fila = getInt(scanner, "> Fila: ");
+            int column = getInt(scanner, "> Columna: ");
             System.out.println();
 
             try {
@@ -53,6 +51,19 @@ public class Clase05 {
             } catch (java.lang.ArrayIndexOutOfBoundsException e) {
                 System.out.println("Lugar fuera del rango");
                 continue;
+            }
+        }
+    }
+
+    private static int getInt(Scanner scanner, String msg) {
+        while (true) {            
+            try {
+                System.out.print(msg);
+                int dato = scanner.nextInt();
+                return dato;
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Dato invalido, no es un ENTERO");
+                scanner.next();
             }
         }
     }
