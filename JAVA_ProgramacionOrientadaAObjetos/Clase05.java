@@ -16,28 +16,7 @@ public class Clase05 {
 
             printGame(tablero);
 
-            while (true) {
-                System.out.printf("\nTurno de \'%c\'\n", player);
-                System.out.print("> Fila: ");
-                int fila = scanner.nextInt();
-                System.out.print("> Columna: ");
-                int column = scanner.nextInt();
-                System.out.println();
-
-                try {
-                    if (tablero[fila - 1][column - 1] == ' ') {
-                        tablero[fila - 1][column - 1] = player;
-                        ex_plays += 1;
-                        break;
-                    } else {
-                        System.out.println("Turno no permitido, el lugar esta usado");
-                        continue;
-                    }
-                } catch (java.lang.ArrayIndexOutOfBoundsException e) {
-                    System.out.println("Lugar fuera del rango");
-                    continue;
-                }
-            }
+            move(scanner, tablero, ex_plays, player);
     
             boolean winner = check_winner(tablero);
             if (winner) {
@@ -51,6 +30,31 @@ public class Clase05 {
         }
 
         scanner.close();
+    }
+
+    private static void move(Scanner scanner, char[][] tablero, int ex_plays, char player) {
+        while (true) {
+            System.out.printf("\nTurno de \'%c\'\n", player);
+            System.out.print("> Fila: ");
+            int fila = scanner.nextInt();
+            System.out.print("> Columna: ");
+            int column = scanner.nextInt();
+            System.out.println();
+
+            try {
+                if (tablero[fila - 1][column - 1] == ' ') {
+                    tablero[fila - 1][column - 1] = player;
+                    ex_plays += 1;
+                    break;
+                } else {
+                    System.out.println("Turno no permitido, el lugar esta usado");
+                    continue;
+                }
+            } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+                System.out.println("Lugar fuera del rango");
+                continue;
+            }
+        }
     }
 
     private static char getPlayer(char player) {
