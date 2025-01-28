@@ -30,7 +30,7 @@ public class Diego02 {
     private static void get_and_print_name(Scanner scanner) {
         System.out.print("Cual es tu nombre? ");
         String nombre = scanner.nextLine();
-        System.out.println("Bienvenido " + nombre + "\n"); // Imprime el nombre del usuario
+        System.out.println("Bienvenido " + nombre + "\n");
     }
 
     private static double get_double(Scanner scanner, String message) {
