@@ -5,8 +5,8 @@ public class Diego02 {
         try (Scanner scanner = new Scanner(System.in)) {
             get_and_print_name(scanner);
             
-            boolean continuar = true;
-            while (continuar) {
+            boolean continuar;
+            do {
                 System.out.println("Piensa en dos numeros!");
                 Double number1 = get_double(scanner, "Primer numero: ");
                 Double number2 = get_double(scanner, "Segundo numero: ");
@@ -23,7 +23,7 @@ public class Diego02 {
                 continuar = opt.toLowerCase().equals("s");
     
                 clear_screen();
-            }
+            } while (continuar);
         }
     }
 
