@@ -2,31 +2,29 @@ import java.util.Scanner;
 
 public class Diego02 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        get_and_print_name(scanner);
+        try (Scanner scanner = new Scanner(System.in)) {
+            get_and_print_name(scanner);
+            
+            boolean continuar = true;
+            while (continuar) {
+                System.out.println("Piensa en dos numeros!");
+                Double number1 = get_double(scanner, "Primer numero: ");
+                Double number2 = get_double(scanner, "Segundo numero: ");
         
-        boolean continuar = true;
-        while (continuar) {
-            System.out.println("Piensa en dos numeros!");
-            Double number1 = get_double(scanner, "Primer numero: ");
-            Double number2 = get_double(scanner, "Segundo numero: ");
+                int operation = get_int(scanner, "\n--- Menu ---\n1) Suma\n2) Resta\n3) Multiplicacion\n4) Division\nOpcion: ");
+                scanner.nextLine();
     
-            int operation = get_int(scanner, "\n--- Menu ---\n1) Suma\n2) Resta\n3) Multiplicacion\n4) Division\nOpcion: ");
-            scanner.nextLine();
-
-            System.out.print("\n");
-
-            make_operation(operation, number1, number2);
-
-            System.out.print("\nDeseas realizar otra operacion?  [S/n]: ");
-            String opt = scanner.nextLine();
-            continuar = opt.toLowerCase().equals("s");
-
-            clear_screen();
+                System.out.print("\n");
+    
+                make_operation(operation, number1, number2);
+    
+                System.out.print("\nDeseas realizar otra operacion?  [S/n]: ");
+                String opt = scanner.nextLine();
+                continuar = opt.toLowerCase().equals("s");
+    
+                clear_screen();
+            }
         }
-
-        scanner.close();
     }
 
     private static void get_and_print_name(Scanner scanner) {
@@ -72,7 +70,7 @@ public class Diego02 {
                 if (number1 != 0 && number2 != 0) {
                     System.out.println("Resultado de la division " + number1 + " / " + number2 + " = " + (number1 / number2));
                 } else {
-                    System.out.println("Operacion no permitida!");
+                    System.out.println("Operacion no permitida! Un numeero es \'0\'");
                 }
             }
             default -> {}
