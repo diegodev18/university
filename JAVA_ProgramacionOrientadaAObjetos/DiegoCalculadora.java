@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Diego02 {
+public class DiegoCalculadora {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             get_and_print_name(scanner);
@@ -21,9 +21,11 @@ public class Diego02 {
                 System.out.print("\nDeseas realizar otra operacion?  [S/n]: ");
                 String opt = scanner.nextLine();
                 continuar = opt.toLowerCase().equals("s");
-    
+
                 clear_screen();
             } while (continuar);
+
+            System.out.println("Adios, gracias por usar la calculadora!");
         }
     }
 
@@ -63,17 +65,24 @@ public class Diego02 {
 
     private static void make_operation(int operation, double  number1, double number2) {
         switch (operation) {
-            case 1 -> System.out.println("Resultado de la suma " + number1 + " + " + number2 + " = " + (number1 + number2));
-            case 2 -> System.out.println("Resultado de la resta " + number1 + " - " + number2 + " = " + (number1 - number2));
-            case 3 -> System.out.println("Resultado de la mutiplicacion " + number1 + " * " + number2 + " = " + (number1 * number2));
-            case 4 -> {
+            case 1:
+                System.out.println("Resultado de la suma " + number1 + " + " + number2 + " = " + (number1 + number2));
+                break;
+            case 2:
+                System.out.println("Resultado de la resta " + number1 + " - " + number2 + " = " + (number1 - number2));
+                break;
+            case 3:
+                System.out.println("Resultado de la mutiplicacion " + number1 + " * " + number2 + " = " + (number1 * number2));
+                break;
+            case 4:
                 if (number1 != 0 && number2 != 0) {
                     System.out.println("Resultado de la division " + number1 + " / " + number2 + " = " + (number1 / number2));
                 } else {
                     System.out.println("Operacion no permitida! Un numeero es \'0\'");
                 }
-            }
-            default -> {}
+                break;
+            default:
+                break;
         }
     }
 
