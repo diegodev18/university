@@ -78,7 +78,7 @@ public class DiegoCalculadora {
                 if (number1 != 0 && number2 != 0) {
                     System.out.println("Resultado de la division " + number1 + " / " + number2 + " = " + (number1 / number2));
                 } else {
-                    System.out.println("Operacion no permitida! Un numeero es \'0\'");
+                    System.out.println("Operacion no permitida! Un numero es igual a \'0\'");
                 }
                 break;
             default:
