@@ -43,7 +43,7 @@ public class Diego04 {
                     break;
             }
 
-            System.out.print("Presione ENTER para continuar...");
+            TiposDeTexto.INPUT("Presione ENTER para continuar...");
             sc.nextLine();
             LimpiarPantalla();
         }
@@ -54,7 +54,7 @@ public class Diego04 {
     private static void ListaElementos(List<Videojuego> videojuegos) {
         TiposDeTexto.H3("Elementos", 10);
         for (Videojuego elemento : videojuegos) {
-            System.out.println(elemento.getId() + ".- " + elemento.getNombre());
+            TiposDeTexto.LI(elemento.getNombre(), elemento.getId());
         }
     }
 
@@ -71,7 +71,7 @@ public class Diego04 {
     private static int ObtenerNumero(String mensaje, boolean limpiar) {
         while (true) {
             try {
-                System.out.print(mensaje);
+                TiposDeTexto.INPUT(mensaje);
                 int num = sc.nextInt();
                 if (limpiar) sc.nextLine();
                 return num;
@@ -85,8 +85,17 @@ public class Diego04 {
     private class Menu {
         public static int MainMenu() {
             int opcion;
+            String[] opciones = {
+                "Nuevo videojuego",
+                "Listar videojuegos",
+                "Actualizar videojuego",
+                "Eliminar videojuego",
+                "Salir"
+            };
             TiposDeTexto.H1("Menu", 10);
-            System.out.println("1.- Nuevo videojuego\n2.- Listar videojuegos\n3.- Actualizar nombre de videojuego\n4.- Eliminar videojuego\n5.- Salir");
+            for (int i = 0; i < opciones.length; i++) {
+                TiposDeTexto.LI(opciones[i], i + 1);
+            }
             opcion = ObtenerNumero("Opcion > ", false);
             sc.nextLine();
             return opcion;
@@ -105,7 +114,7 @@ public class Diego04 {
             ListaElementos(videojuegos);
             int id = ObtenerNumero("ID del videojuego a actualizar > ", true);
             String anteriorNombre = videojuegos.get(id - 1).getNombre();
-            System.out.print("Nuevo nombre > ");
+            TiposDeTexto.INPUT("Nuevo nombre > ");
             videojuegos.get(id - 1).setNombre(sc.nextLine());
             System.out.println("Nombre actualizado de " + anteriorNombre + " a " + videojuegos.get(id - 1).getNombre());
         }
@@ -117,38 +126,6 @@ public class Diego04 {
             String nombre4 = videojuegos.get(id - 1).getNombre();
             videojuegos.remove(id - 1);
             System.out.println("Videojuego " + nombre4 + " eliminado");     
-        }
-    }
-
-    private class TiposDeTexto {
-        public static void H1(String texto, int espacios) {
-            System.out.println(
-                Colores.BLUE.TXT +
-                "=".repeat(espacios) +
-                " " + texto + " " +
-                "=".repeat(espacios) +
-                Colores.RESET
-            );
-        }
-
-        public static void H2(String texto, int espacios) {
-            System.out.println(
-                Colores.GREEN.TXT +
-                "=".repeat(espacios) +
-                " " + texto + " " +
-                "=".repeat(espacios) +
-                Colores.RESET
-            );
-        }
-
-        public static void H3(String texto, int espacios) {
-            System.out.println(
-                Colores.YELLOW.TXT +
-                "=".repeat(espacios) +
-                " " + texto + " " +
-                "=".repeat(espacios) +
-                Colores.RESET
-            );
         }
     }
 }
