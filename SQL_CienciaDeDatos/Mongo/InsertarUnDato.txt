@@ -1,0 +1,1 @@
+db.mi_coleccion.insertOne({ nombre: "Diego", edad: 25, ciudad: "CDMX" })

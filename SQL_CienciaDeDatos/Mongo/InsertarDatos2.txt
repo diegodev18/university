@@ -1,0 +1,11 @@
+db.clientes.insertMany([
+    {
+        nombre: "Juan Perez", correo: "juanperez@gmail.com", edad: 30
+    },
+    {
+        nombre: "Maria Gomez", correo: "mariagomez@gmail.com", edad: 25
+    },
+    {
+        nombre: "Carlos Ruiz", correo: "carlosruiz@gmail.com", edad: 35
+    },
+])

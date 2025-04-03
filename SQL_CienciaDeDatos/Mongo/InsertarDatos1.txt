@@ -1,0 +1,14 @@
+db.productos.insertMany([
+    {
+        nombre: "Balon de futbol", categoria: "Deportes", precio: 300, stock: 50
+    },
+    {
+        nombre: "Raqueta de tenis", categoria: "Deportes", precio: 1200, stock: 20
+    },
+    {
+        nombre: "Zapatillas deportivas", categoria: "Calzado", precio: 1500, stock: 30
+    },
+    {
+        nombre: "Gorra deportiva", categoria: "Accesorios", precio: 200, stock: 100
+    }
+])
