@@ -1,6 +1,5 @@
 Proceso HolaMundo
-    Escribir "¡Hola Mundo!"
-    Escribir "¿Cuál es tu nombre?"
+    Escribir "¿Cual es tu nombre?"
     Leer nombre
-    Escribir "Mucho gusto, " nombre "!"
+    Escribir "Hola " nombre "Bienvenido a PseInt"
 FinProceso
