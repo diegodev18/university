@@ -1,7 +1,7 @@
 Proceso Suma
-    Escribir "Ingrese el primer número:";
+    Escribir "Ingresa el valor del primer número:";
     Leer num1;
-    Escribir "Ingrese el segundo número:";
+    Escribir "Ingresa el valor del segundo número:";
     Leer num2;
-    Escribir "La suma es: " (num1 + num2);
+    Escribir "La suma de  num1, + num2  es " (num1 + num2);
 FinProceso
