@@ -52,7 +52,7 @@ Algoritmo SimuladorAscensorInteligente
     
     Escribir ""
     Escribir "================================================"
-    Escribir "Llamadas recibidas: ", Sin Saltar
+    Escribir "Llamadas recibidas: " Sin Saltar
     Para i <- 1 Hasta numLlamadas Con Paso 1 Hacer
         Si i < numLlamadas Entonces
             Escribir Sin Saltar "[", llamadas[i], "], "
@@ -110,7 +110,7 @@ Algoritmo SimuladorAscensorInteligente
     Escribir ""
     
     Si contArriba > 0 Entonces
-        Escribir "Llamadas ARRIBA (ordenadas): ", Sin Saltar
+        Escribir "Llamadas ARRIBA (ordenadas): " Sin Saltar
         Para i <- 1 Hasta contArriba Con Paso 1 Hacer
             Si i < contArriba Entonces
                 Escribir Sin Saltar "[", llamadasArriba[i], "], "
@@ -123,7 +123,7 @@ Algoritmo SimuladorAscensorInteligente
     FinSi
     
     Si contAbajo > 0 Entonces
-        Escribir "Llamadas ABAJO (ordenadas): ", Sin Saltar
+        Escribir "Llamadas ABAJO (ordenadas): " Sin Saltar
         Para i <- 1 Hasta contAbajo Con Paso 1 Hacer
             Si i < contAbajo Entonces
                 Escribir Sin Saltar "[", llamadasAbajo[i], "], "
