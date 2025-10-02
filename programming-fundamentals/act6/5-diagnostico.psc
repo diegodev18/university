@@ -136,7 +136,7 @@ Algoritmo SistemaDiagnosticoPorPuntuacion
     Escribir "   PRUEBA DE ESCRITORIO - SEGUIMIENTO DE CÁLCULO"
     Escribir "========================================================"
     Escribir ""
-    Escribir "Respuestas registradas: ", Sin Saltar
+    Escribir "Respuestas registradas: " Sin Saltar
     Para i <- 1 Hasta 5 Con Paso 1 Hacer
         Si i < 5 Entonces
             Escribir Sin Saltar respuestas[i], ", "
@@ -174,7 +174,7 @@ Algoritmo SistemaDiagnosticoPorPuntuacion
     Escribir "Puntajes finales:"
     
     Para i <- 1 Hasta 3 Con Paso 1 Hacer
-        Escribir "  • ", nombresEnfermedades[i], ": ", puntajeEnfermedades[i], " puntos"
+        Escribir "  ? ", nombresEnfermedades[i], ": ", puntajeEnfermedades[i], " puntos"
     FinPara
     
     Escribir ""
@@ -209,7 +209,7 @@ Algoritmo SistemaDiagnosticoPorPuntuacion
             Escribir ""
             Para i <- 1 Hasta 3 Con Paso 1 Hacer
                 Si puntajeEnfermedades[i] = maxPuntaje Entonces
-                    Escribir "  • ", nombresEnfermedades[i], " (", maxPuntaje, " puntos)"
+                    Escribir "  ? ", nombresEnfermedades[i], " (", maxPuntaje, " puntos)"
                 FinSi
             FinPara
             Escribir ""
@@ -220,7 +220,7 @@ Algoritmo SistemaDiagnosticoPorPuntuacion
             Escribir ""
             Para i <- 1 Hasta 3 Con Paso 1 Hacer
                 Si puntajeEnfermedades[i] = maxPuntaje Entonces
-                    Escribir "  ► ", nombresEnfermedades[i], " (", maxPuntaje, " puntos)"
+                    Escribir "  ? ", nombresEnfermedades[i], " (", maxPuntaje, " puntos)"
                 FinSi
             FinPara
             Escribir ""
