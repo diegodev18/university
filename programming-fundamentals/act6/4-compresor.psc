@@ -60,7 +60,7 @@ Algoritmo CompresorTextoRLE
         caracterActual <- Subcadena(cadenaOriginal, 1, 1)
         
         // Mostrar primer paso
-        Escribir "| ", 1, "   | (inicio)   |    ", caracterActual, "      |  ", contador, "   | ", cadenaComprimida, Sin Saltar
+        Escribir "| " 1 "   | (inicio)   |    " caracterActual "      |  " contador "   | " cadenaComprimida Sin Saltar
         Escribir " |"
         
         // Recorrer la cadena una sola vez
@@ -72,7 +72,7 @@ Algoritmo CompresorTextoRLE
                 contador <- contador + 1
                 
                 // Mostrar paso
-                Escribir "| ", i, "   |     ", caracterActual, "      |    ", caracterSiguiente, "      |  ", contador, "   | ", cadenaComprimida, Sin Saltar
+                Escribir "| " i "   |     " caracterActual "      |    " caracterSiguiente "      |  " contador "   | " cadenaComprimida Sin Saltar
                 Escribir " |"
             SiNo
                 // Si es diferente, agregar al resultado y reiniciar contador
@@ -80,7 +80,7 @@ Algoritmo CompresorTextoRLE
                 cadenaComprimida <- Concatenar(cadenaComprimida, caracterActual)
                 
                 // Mostrar paso (escritura)
-                Escribir "| ", i, "   |     ", caracterActual, "      |    ", caracterSiguiente, "      | (", contador, caracterActual, ")", " | ", cadenaComprimida, Sin Saltar
+                Escribir "| " i "   |     " caracterActual "      |    " caracterSiguiente "      | (", contador, caracterActual, ")" " | " cadenaComprimida Sin Saltar
                 Escribir " |"
                 
                 // Reiniciar para el nuevo carácter
@@ -94,7 +94,7 @@ Algoritmo CompresorTextoRLE
         cadenaComprimida <- Concatenar(cadenaComprimida, caracterActual)
         
         // Mostrar último paso
-        Escribir "| FIN |     ", caracterActual, "      |   (fin)   | (", contador, caracterActual, ")", " | ", cadenaComprimida, Sin Saltar
+        Escribir "| FIN |     " caracterActual "      |   (fin)   | (", contador, caracterActual, ")", " | " cadenaComprimida Sin Saltar
         Escribir " |"
         
         Escribir "-----------------------------------------------------"
@@ -157,10 +157,10 @@ FinFuncion
 SubProceso DescomprimirTexto(cadenaComprimida)
     Definir opcion Como Caracter
     Definir cadenaDescomprimida Como Caracter
-    Definir i, j, longitud, numero Como Entero
+    Definir i, j, long, numero Como Entero
     Definir caracter, numeroStr Como Caracter
     
-    Escribir "¿Desea ver la descompresión del texto? (S/N): ", Sin Saltar
+    Escribir "¿Desea ver la descompresión del texto? (S/N): " Sin Saltar
     Leer opcion
     
     Si Mayusculas(opcion) = "S" Entonces
@@ -171,13 +171,13 @@ SubProceso DescomprimirTexto(cadenaComprimida)
         Escribir ""
         
         cadenaDescomprimida <- ""
-        longitud <- Longitud(cadenaComprimida)
+        long <- Longitud(cadenaComprimida)
         i <- 1
         
-        Mientras i <= longitud Hacer
+        Mientras i <= long Hacer
             // Leer el número (pueden ser múltiples dígitos)
             numeroStr <- ""
-            Mientras i <= longitud Y Subcadena(cadenaComprimida, i, i) >= "0" Y Subcadena(cadenaComprimida, i, i) <= "9" Hacer
+            Mientras i <= long Y Subcadena(cadenaComprimida, i, i) >= "0" Y Subcadena(cadenaComprimida, i, i) <= "9" Hacer
                 numeroStr <- Concatenar(numeroStr, Subcadena(cadenaComprimida, i, i))
                 i <- i + 1
             FinMientras
@@ -186,7 +186,7 @@ SubProceso DescomprimirTexto(cadenaComprimida)
             numero <- ConvertirANumero(numeroStr)
             
             // Leer el carácter
-            Si i <= longitud Entonces
+            Si i <= long Entonces
                 caracter <- Subcadena(cadenaComprimida, i, i)
                 
                 // Repetir el carácter 'numero' veces
