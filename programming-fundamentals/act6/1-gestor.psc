@@ -6,10 +6,10 @@ Algoritmo GestorAsignacionTareas
     Definir tiempoTotal, tiempoMinimo Como Entero
     Definir numCombinacion Como Entero
     
-    // Dimensionar matrices (4 elementos para usar índices 1-3)
-    Dimension tiempos[4,4]
-    Dimension combinacion[4]
-    Dimension mejorCombinacion[4]
+    // Dimensionar matrices
+    Dimension tiempos[3,3]
+    Dimension combinacion[3]
+    Dimension mejorCombinacion[3]
     
     // Inicializar la matriz de tiempos según el caso de prueba
     Escribir "=== GESTOR DE ASIGNACIÓN DE TAREAS ==="
@@ -32,7 +32,7 @@ Algoritmo GestorAsignacionTareas
     
     // Mostrar la matriz
     Para i <- 1 Hasta 3 Con Paso 1 Hacer
-        Escribir Sin Saltar "E", i, ": "
+        Escribir Sin Saltar "E", i+1, ": "
         Para j <- 1 Hasta 3 Con Paso 1 Hacer
             Escribir Sin Saltar "  ", tiempos[i,j]
         FinPara
@@ -67,9 +67,9 @@ Algoritmo GestorAsignacionTareas
                     
                     // Mostrar la combinación actual
                     Escribir Sin Saltar "Combinación ", numCombinacion, ": "
-                    Escribir Sin Saltar "E1->T", i, " (", tiempos[1,i], "h), "
-                    Escribir Sin Saltar "E2->T", j, " (", tiempos[2,j], "h), "
-                    Escribir Sin Saltar "E3->T", k, " (", tiempos[3,k], "h)"
+                    Escribir Sin Saltar "E1->T", i+1, " (", tiempos[1,i], "h), "
+                    Escribir Sin Saltar "E2->T", j+1, " (", tiempos[2,j], "h), "
+                    Escribir Sin Saltar "E3->T", k+1, " (", tiempos[3,k], "h)"
                     Escribir " | Tiempo Total: ", tiempoTotal, " horas"
                     
                     // Verificar si es la mejor combinación hasta ahora
@@ -89,9 +89,9 @@ Algoritmo GestorAsignacionTareas
     Escribir "=== RESULTADO ÓPTIMO ==="
     Escribir ""
     Escribir "La asignación óptima es:"
-    Escribir "• E1 asignado a T", mejorCombinacion[1], " (", tiempos[1,mejorCombinacion[1]], " horas)"
-    Escribir "• E2 asignado a T", mejorCombinacion[2], " (", tiempos[2,mejorCombinacion[2]], " horas)"
-    Escribir "• E3 asignado a T", mejorCombinacion[3], " (", tiempos[3,mejorCombinacion[3]], " horas)"
+    Escribir "? E1 asignado a T", mejorCombinacion[1]+1, " (", tiempos[1,mejorCombinacion[1]], " horas)"
+    Escribir "? E2 asignado a T", mejorCombinacion[2]+1, " (", tiempos[2,mejorCombinacion[2]], " horas)"
+    Escribir "? E3 asignado a T", mejorCombinacion[3]+1, " (", tiempos[3,mejorCombinacion[3]], " horas)"
     Escribir ""
     Escribir "Tiempo total mínimo: ", tiempoMinimo, " horas"
     Escribir ""
