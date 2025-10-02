@@ -18,7 +18,7 @@ Algoritmo BusquedaNumerosVampiro
     Escribir "========================================================"
     Escribir ""
     Escribir "Un Número Vampiro de 4 dígitos es un número que es el"
-    Escribir "producto de dos 'colmillos' de 2 dígitos formados con"
+    Escribir "producto de dos" colmillos "de 2 dígitos formados con"
     Escribir "todos los dígitos del número original."
     Escribir ""
     Escribir "Ejemplo: 1260 = 21 × 60 (dígitos: 1,2,6,0)"
@@ -60,11 +60,11 @@ Algoritmo BusquedaNumerosVampiro
                         Escribir contadorVampiros, ". ", numero, " = ", colmillo1, " × ", colmillo2
                         
                         // Mostrar verificación de dígitos
-                        Escribir "   Dígitos de ", numero, ": {", Sin Saltar
+                        Escribir "   Dígitos de " numero ": {" Sin Saltar
                         MostrarDigitosOrdenados(numero)
                         Escribir "}"
                         
-                        Escribir "   Dígitos de ", colmillo1, ",", colmillo2, ": {", Sin Saltar
+                        Escribir "   Dígitos de " colmillo1 "," colmillo2 ": {" Sin Saltar
                         MostrarDigitosOrdenadosColmillos(colmillo1, colmillo2)
                         Escribir "}"
                         Escribir ""
