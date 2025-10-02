@@ -6,10 +6,10 @@ Algoritmo GestorAsignacionTareas
     Definir tiempoTotal, tiempoMinimo Como Entero
     Definir numCombinacion Como Entero
     
-    // Dimensionar matrices
-    Dimension tiempos[3,3]
-    Dimension combinacion[3]
-    Dimension mejorCombinacion[3]
+    // Dimensionar matrices (4 elementos para usar índices 1-3)
+    Dimension tiempos[4,4]
+    Dimension combinacion[4]
+    Dimension mejorCombinacion[4]
     
     // Inicializar la matriz de tiempos según el caso de prueba
     Escribir "=== GESTOR DE ASIGNACIÓN DE TAREAS ==="
